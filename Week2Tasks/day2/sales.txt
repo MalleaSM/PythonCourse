@@ -1,0 +1,9 @@
+order item 1: 1.0
+order item 2: 2.5
+Total:3.5
+order item 1: 1.0
+order item 2: 2.5
+Total:3.5
+order item 1: 6.0
+order item 2: 21.5
+Total:27.5
