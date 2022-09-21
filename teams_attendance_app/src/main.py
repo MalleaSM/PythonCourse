@@ -2,8 +2,6 @@
 # sys.path is a list of absolute path strings
 
 ## app entry point
-from tabnanny import check
-from helpers.csv_processor import check_duplicate_csv_files
 from helpers.data_processor import getPaths
 from helpers.data_processor import filter_directories
 from helpers.json_processor import create_json
@@ -47,9 +45,8 @@ def main():
     if(arguments):
         dates_found = filter_directories(arguments)
         paths = getPaths()
-        check_duplicate_csv_files(paths)  
-        create_json(paths,arguments[0],arguments[1],arguments[2])
-    else:
-        print("arguments none")
-    
+        if(len(paths)):
+            create_json(paths,arguments[0],arguments[1],arguments[2])
+        else:
+            print("There are no files with the meeting title", arguments[0], "between:",arguments[1],"-",arguments[2])
 main()
