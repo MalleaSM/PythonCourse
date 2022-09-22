@@ -16,7 +16,6 @@ def process_questions():
 def process_question_options(question):
     ## display input to request meeting name, end and start date
     ## drive "input" aquisition while not Quit
-
     if question != 2:
         meeting_name = input("Please Enter the METTING TITLE or Q to quit: ")
         if(meeting_name != "Q"): 
@@ -43,7 +42,7 @@ def main():
     arguments =  process_question_options(question)
     ## TODO: implement bussiness logic
     if(arguments):
-        dates_found = filter_directories(arguments)
+        filter_directories(arguments)
         paths = getPaths()
         if(len(paths)):
             create_json(paths,arguments[0],arguments[1],arguments[2])

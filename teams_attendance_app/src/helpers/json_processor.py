@@ -36,6 +36,8 @@ def create_json(paths,title,start_date,end_date):
     json_data_participant = json.dumps(dict_participant, indent=4)
     json_data_duration = json.dumps(dict_time_meeting, indent=4)
     
+    print(json_data_participant)
+    print(json_data_duration)
     write_file('participants.json',json_data_participant)
     write_file('meeting_duration.json',json_data_duration)
 
