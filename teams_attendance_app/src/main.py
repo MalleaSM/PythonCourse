@@ -18,7 +18,7 @@ def process_question_options(question):
     ## drive "input" aquisition while not Quit
 
     if question != 2:
-        meeting_name = input("Please Enter the METTING TITILE or Q to quit: ")
+        meeting_name = input("Please Enter the METTING TITLE or Q to quit: ")
         if(meeting_name != "Q"): 
             start_date = input("Please enter the start date in format mm/dd/yyyy or Q to quit: ")
             if(start_date != "Q"):
